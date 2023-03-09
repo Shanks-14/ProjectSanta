@@ -1,0 +1,250 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Rock+Salt&display=swap');
+
+
+/* Custom properties */
+:root{
+    --light-color: #fff;
+    --dark-color: #171721;
+    --dark-color-lighter: #7E8299;
+    --accent-color: #22beaa;
+    --body-background-color: #202028;
+    --border-bottom-color: rgba(255,255,255,.05);
+    --transparent-button-color: rgba(255,255,255,.1);
+    --font-size-small: 1.4rem;
+    --font-size-normal: 1.6rem;
+    --font-size-medium: 2rem;
+    --font-size-large: 2.4rem;
+    --font-family: 'Poppins', sans-serif;
+    --margin-small: 1rem;
+    --margin-medium: 1.5rem;
+    --gap-small: 1rem;
+    --gap-medium: 2.5rem;
+}
+
+.theme-light{
+    --light-color: #171721;
+    --dark-color: #fff;
+    --dark-color-lighter: #7E8299;
+    --body-background-color: #eef0f8;
+    --border-bottom-color: rgba(23,23,23,.05);
+    --transparent-button-color: var(--accent-color);
+}
+
+
+/* Base styles */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:10px;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size-normal);
+    color: var(--light-color);
+    line-height: 1.5;
+    background-color: var(--body-background-color);
+}
+
+
+/* Reusable classes */
+.container{
+    max-width: 134rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.place-items-center{
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Header */
+.header{
+    background-color: var(--dark-color);
+}
+
+.nav{
+    height: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    font-family: 'Rock Salt', cursive;
+    font-weight: bold;
+    font-size: var(--font-size-medium);
+}
+
+.align-right{
+    margin-left: auto;
+    background-color: var(--accent-color);
+    border-radius: .4rem;
+}
+
+.icon-btn{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.theme-dark-icon{
+    display: none;
+}
+
+.nav-mobile{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2.5rem;
+    transform: translateX(-105%);
+    z-index: 999;
+    transition: transform .5s;
+}
+
+/* JavaScript styles */
+.nav-mobile.active{
+    transform: translateX(0);
+}
+
+.theme-light .theme-dark-icon{
+    display: block;
+}
+
+.theme-light .theme-light-icon{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer{
+    font-size: var(--font-size-small);
+    color: var(--dark-color-lighter);
+    background-color: var(--dark-color);
+    padding: 1.35rem 0;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-medium);
+}
+
+.footer .list-link{
+    padding-left: 0;
+}
+
+.copyright-information{
+    order: 1;
+}
+
+
+/* Scroller */
+::-webkit-scrollbar{
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #3f4252;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #2e303b;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px){
+    .nav{
+        height: 7rem;
+    }
+
+    .independent-title{
+        font-size: var(--font-size-large);
+        padding: 4rem 0 2rem;
+    }
+
+    .footer-container{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .copyright-information{
+        order: 0;
+    }
+
+    .footer .list{
+        flex-direction: row;
+        margin-left: auto;
+    }
+
+    .footer .list-link{
+        padding-left: 1.5rem;
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+    .menu-toggle-btn{
+        display: none !important;
+    }
+    
+    .nav-mobile{
+        width: initial;
+        height: initial;
+        background-color: initial;
+        position: inherit;
+        padding: initial;
+        transform: initial;
+        transition: initial
+    }
+
+    .nav-mobile > .list{
+        flex-direction: row;
+        margin-left: 4rem;
+    }
+
+    .list-link,
+    .card-body-link{
+        transition: color .25s, background-color .25s;
+    }
+
+    .nav-mobile .list-link{
+        border-radius: .4rem;
+    }
+
+    .current,
+    .nav-mobile .list-link:hover,
+    .nav-mobile .list-link:focus{
+        background-color: var(--accent-color);
+        color: var(--light-color);
+    }
+
+    .footer .list-link:hover{
+        color: var(--accent-color);
+    }
+}

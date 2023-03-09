@@ -1,0 +1,101 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Rock+Salt&display=swap');
+
+*>*{
+    font-family: "Poppins",cursive;
+}
+
+/* variables */
+body{
+    --text-light: #f3f4f6e6;
+    --primary-dark: #374151;
+    --secondary-light: #374151b3;
+    --bg-light: #f3f4f64d;
+    --bg-btn: #4338cacc;
+
+    /* css style */
+    background-color: var(--text-light);
+} 
+
+body.dark{
+    --text-light: #374151;
+    --primary-dark: #f3f4f6e6;
+    --bg-light: #f3f4f64d;
+    --bg-btn: #4338cacc;
+}
+
+
+p{
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(auto,320px));
+    row-gap: 2em;
+    column-gap: 3em;
+    margin: 3em 0;
+}
+
+.grid.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em 0;
+}
+
+.grid.icons>span{
+    font-size: 4em;
+    color: var(--bg-btn);
+}
+
+.primary-dark{
+    color: var(--primary-dark);
+}
+
+.secondary-dark{
+    color: var(--secondary-light);
+}
+
+.bg-light{
+    background-color: var(--bg-light);
+    box-shadow: 1px 5px 20px #3741511a;
+}
+
+/* https://codepen.io/aliceyt/pen/qBObwpZ */
+
+input[type="checkbox"]{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    outline: none;
+    background-color: transparent;
+}
+
+input[type="checkbox"]{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: var(--primary-dark);
+    border-radius: 50px;
+}
+
+input[type="checkbox"]:checked::before{
+    transform: translate(100%);
+}
