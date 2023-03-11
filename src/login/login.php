@@ -1,5 +1,5 @@
 <?php
-include_once('./includes/header.php');
+include_once('./src/includes/header.php');
 ?>
 <!--navbar-->
 <nav class="nav container">
@@ -33,7 +33,7 @@ include_once('./includes/header.php');
                                 <label class="form-label" for="Username">
                                     <strong>Username Or Email</strong>
                                 </label>
-                                <input class="input" autofocus type="text" data-val="true" data-val-required="The Username or Email is required." id="Username" name="Username" value>
+                                <input class="input" autofocus type="text" data-val="true" data-val-required="The Username or Email is required." id="Username" name="Username" value="">
                             </div>
                             <div class="pass">
                                 <label class="form-label" for="Password">Password</label>
@@ -102,7 +102,7 @@ include_once('./includes/header.php');
 <!-- Script  -->
 <script src="/js/main.js"></script>
 <?php
-include_once('./includes/footer.php');
+include_once('./src/includes/footer.php');
 ?>
 <script src="../main/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>

@@ -1,5 +1,5 @@
 <?php
-include_once('./includes/header.php');
+include_once('./src/includes/header.php');
 ?>
 <!--navbar-->
 <nav class="nav container">
@@ -87,7 +87,7 @@ include_once('./includes/header.php');
                                     <label class="form-label" for="Name">
                                         <strong>First Name</strong>
                                     </label>
-                                    <input class="input js-first-name-input" type="text" data-val="true" data-val-required="The Name field is required." id="Name" name="Name" value>
+                                    <input class="input js-first-name-input" type="text" data-val="true" data-val-required="The Name field is required." id="Firstame" name="Firstame" value>
                                     <div class="input-error-message hide">Please input first name</div>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@ include_once('./includes/header.php');
                                     <label class="form-label" for="LastName">
                                         <strong>Last Name</strong>
                                     </label>
-                                    <input class="input js-last-name-input" type="text" id="LastName" name="LastName" value>
+                                    <input class="input js-last-name-input" type="text" id="Lastname" name="Lastname" value>
                                 </div>
                             </div>
                         </fieldset>
@@ -137,7 +137,7 @@ include_once('./includes/header.php');
                                     </div>
                                 </div>
                                 <div class="mb-3 login-buttons">
-                                    <button class="btn btn-primary btn-santa-primary" name="button" value="register">next</button>
+                                    <button class="btn btn-primary btn-santa-primary" name="button" id="submit" value="register">Submit</button>
                                 </div>
                                 <!--Login Page Link-->
                                 <div>
@@ -162,9 +162,8 @@ include_once('./includes/header.php');
 <!-- Script  -->
 <script src="/js/main.js"></script>
 <?php
-include_once('./includes/footer.php');
+include_once('./src/includes/footer.php');
 ?>
-<script src="../main/main.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
